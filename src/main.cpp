@@ -18,7 +18,8 @@ int InputPins[] = {3,4,5,6};
 
 void setup() {
 for (unsigned int i = 0; (i <= sizeof(InputPins)); i++){                          //Cycle through the array of input pins and set them to INPUT_PULLUP
-  pinMode(InputPins[i], INPUT_PULLUP);}
+  pinMode(InputPins[i], INPUT_PULLUP);
+  digitalWrite(InputPins[i], LOW);}
 
 for (unsigned int i = 0; (i <= sizeof(OutputPins)); i++){                         //Cycle through the array of output pins and set them to OUTPUT, write them low at the same time
   pinMode(OutputPins[i], OUTPUT);
@@ -27,7 +28,7 @@ for (unsigned int i = 0; (i <= sizeof(OutputPins)); i++){                       
 
 
 void loop() {
-   if(digitalRead(InputPins[0])==LOW){
+   if(digitalRead(InputPins[0])==HIGH){
    
                                                                                   //micros() counts up from initial powerup
     if(micros() >= time_1 + INTERVAL_OUTPUT1){                                    //Check if current micros() is greater or equal to the first time target
