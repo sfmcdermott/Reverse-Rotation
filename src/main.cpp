@@ -5,8 +5,8 @@
 #define INTERVAL_OUTPUT2 5000              
  
 unsigned long time_1 = 0;                 //Pulse the first output on startup
-unsigned long time_2 = time_1 + 2000;   //This is the delay for the second output from when the first output has activated
-unsigned int On1Time = 1248;              //This is the width of the output pulses
+unsigned long time_2 = time_1 + 2000;     //This is the delay for the second output from when the first output has activated
+unsigned int On1Time = 2496;              //This is the width of the output pulses
 unsigned int On2Time = 2496;              //Because the nano is 8mhz the micros() value increments in multiples of 8, so everything has to be a multiple of 8
 
 int OutputPins[] = {9,10};
